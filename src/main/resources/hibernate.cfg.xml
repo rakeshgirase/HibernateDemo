@@ -21,8 +21,10 @@
     <property name="current_session_context_class">thread</property>
  
     
-     <mapping class="com.exuberant.model.Employee" />
-     <mapping class="com.exuberant.model.Department" />
+     <mapping class="com.exuberant.model.onetomany.Employee" />
+     <mapping class="com.exuberant.model.onetomany.Department" />
+     <mapping class="com.exuberant.model.onetoone.Stock" />
+     <mapping class="com.exuberant.model.onetoone.StockDetail" />  
  
 </session-factory>
 </hibernate-configuration>

@@ -1,4 +1,4 @@
-package com.exuberant.model;
+package com.exuberant.model.onetomany;
  
 import java.util.ArrayList;
 import java.util.List;
@@ -50,7 +50,5 @@ public class Department {
 	@Override
 	public String toString() {
 		return "Department [id=" + id + ", name=" + name + ", employees=" + employees + "]";
-	}
-    
-    
+	}    
 }

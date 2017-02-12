@@ -1,27 +1,20 @@
-package com.exuberant.hibernate;
+package com.exuberant.hibernate.service;
 
 import java.util.List;
 
 import org.hibernate.Session;
 import org.hibernate.query.Query;
 
-import com.exuberant.model.Department;
-import com.exuberant.model.Employee;
+import com.exuberant.model.onetomany.Employee;
 import com.exuberant.util.HibernateUtil;
 
 public class CrudService {
 
-	public void save(){
+	public <T> void save(T t){
 		Session session = HibernateUtil.getSessionFactory().openSession();
 		  
-        session.beginTransaction();
- 
-        Department department = new Department("java");
-        session.save(department);
- 
-        session.save(new Employee("Jakab Gipsz",department));
-        session.save(new Employee("Captain Nemo",department));
-      
+        session.beginTransaction(); 
+        session.save(t);      
         session.getTransaction().commit(); 
 	}
 
